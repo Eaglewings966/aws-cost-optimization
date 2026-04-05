@@ -89,6 +89,7 @@ in one place.
 ---
 
 ## Architecture Overview
+```text
 ┌──────────────────────────────────────────────────────────────┐
 │                    COST OPTIMIZATION FLOW                    │
 │                                                              │
@@ -129,6 +130,7 @@ in one place.
 │          ├── Lambda duration metrics                        │
 │          └── Active cost alarms                            │
 └──────────────────────────────────────────────────────────────┘
+```
 
 ---
 
@@ -189,6 +191,7 @@ without tags due to a missed tag block.
 ---
 
 ## Project Structure
+```text
 aws-cost-optimization/
 │
 ├── terraform/
@@ -209,6 +212,7 @@ aws-cost-optimization/
 │
 ├── .gitignore               # Excludes tfstate, tfvars, .terraform/, zips
 └── README.md
+```
 
 ---
 
@@ -312,6 +316,7 @@ aws s3api get-bucket-lifecycle-configuration \
 ---
 
 ## How the Lambda Works
+```text
 EventBridge triggers Lambda every 24 hours
 │
 ▼
@@ -335,6 +340,7 @@ Add to stopped list
 ▼
 Lambda publishes detailed report to SNS
 Report delivered to devops-alerts@gmail.com
+```
 
 ---
 
